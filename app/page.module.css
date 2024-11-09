@@ -43,7 +43,19 @@
     font-size: 2rem;
     text-align: left;
   }
-}
+
+  .description {
+    text-align: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 600;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+  }
 
 .news {
   position: relative;
