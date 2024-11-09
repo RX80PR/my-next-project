@@ -11,22 +11,15 @@
 }
 
 .title {
-
-font-size: 3rem;
- 
-font-weight: bold;
- 
-text-align: center;
- 
-margin-bottom: 1rem;
- 
-}
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center; 
+  margin-bottom: 1rem;
+ }
  
 .description {
- 
-text-align: center;
- 
-}
+  text-align: center;
+ }
 
 .bgimg {
     position: absolute;
@@ -42,14 +35,112 @@ text-align: center;
     z-index: -1;
 }
 
-@media (max-width: 649px) {
-    .top {
-      padding: 120px 16px;
-    }
-    .title {
-      font-size: 2rem;
-      text-align: left;
-    }
+@media (max-width: 640px) {
+  .top {
+    padding: 120px 16px;
+  }
+  .title {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+
+.news {
+  position: relative;
+  background-color: #fff;
+  width: 840px;
+  margin: -40px auto 0;
+  padding: 24px 40px;
+  border-radius:
+var(--border-radius);
+}
+
+.newsTitle {
+  font-size:1.5rem;
+}
+
+.list {
+  border-bottom: 1px solid
+var(--color-border-light);
+}
+.list:last-child {
+  border-bottom: none;
+}
+
+.link {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 24px 0;
+}
+
+.image {
+  width: 200px;
+  height: auto;
+  border-radius:
+var(--border-radius);
+}
+
+.newsItemTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tag {
+  background-color:
+var(--color-bg-sub);
+  padding: 4px 12px;
+  border-radius:
+var(--border-radius);
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .news {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .newsTitle {
+    font-size: 1.2rem;
+  }
+
+  .link {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  .newsItemTitle {
+    font-size: 1rem;
+  }
+
+  .meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tag {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .news {
+    width: calc(100% - 160px);
+  }
+}
 
     .description {
       text-align: center;
@@ -69,4 +160,9 @@ text-align: center;
         justify-content: center;
         z-index: -1;
     }
-}
+
+    .news {
+      width: calc(100% - 32px);
+      padding: 16px 24px;
+    }
+  }
