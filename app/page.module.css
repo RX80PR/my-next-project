@@ -35,28 +35,6 @@
     z-index: -1;
 }
 
-@media (max-width: 640px) {
-  .top {
-    padding: 120px 16px;
-  }
-  .title {
-    font-size: 2rem;
-    text-align: left;
-  }
-
-  .description {
-    text-align: absolute;
-    top: 0;
-    right: 0;
-    width: auto;
-    height: 600;
-    object-fit: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: -1;
-  }
-
 .news {
   position: relative;
   background-color: #fff;
@@ -68,91 +46,33 @@ var(--border-radius);
 }
 
 .newsTitle {
-  font-size:1.5rem;
+  font-size: 1.5rem;
 }
 
-.list {
-  border-bottom: 1px solid
-var(--color-border-light);
+.newsLink {
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
 }
-.list:last-child {
+
+.list.last-child {
   border-bottom: none;
 }
 
-.link {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  padding: 24px 0;
-}
-
-.image {
-  width: 200px;
-  height: auto;
-  border-radius:
-var(--border-radius);
-}
-
-.newsItemTitle {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.meta {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.tag {
-  background-color:
-var(--color-bg-sub);
-  padding: 4px 12px;
-  border-radius:
-var(--border-radius);
-  white-space: nowrap;
-  font-size: 1rem;
-}
-
-@media (max-width: 640px) {
-  .news {
-    width: 100%;
-    padding: 16px;
-  }
-
-  .newsTitle {
-    font-size: 1.2rem;
-  }
-
-  .link {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .image {
-    width: 100%;
-  }
-
-  .newsItemTitle {
-    font-size: 1rem;
-  }
-
-  .meta {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .tag {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 1000px) {
+  @media(max-width: 1000px) {
   .news {
     width: calc(100% - 160px);
   }
 }
+
+  @media(max-width: 640px) {
+    .top {
+      padding: 120px 16px;
+    }
+    .title {
+      font-size: 2rem;
+      text-align: left;
+    }
 
     .description {
       text-align: center;
@@ -161,20 +81,27 @@ var(--border-radius);
     }
 
     .bgimg {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: auto;
-        height: 600px;
-        object-fit: cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: auto;
+      height: 600px;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: -1;
     }
 
     .news {
       width: calc(100% - 32px);
       padding: 16px 24px;
     }
-  }
+
+    .newsLink {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      margin-top: 16px;
+    }
+}
